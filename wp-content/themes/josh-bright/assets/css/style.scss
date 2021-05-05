@@ -1,0 +1,62 @@
+/*
+Theme Name: Josh Bright
+Theme URI: https://jafarsalami.co.uk
+Author: Jafar Salami
+Author URI: https://jafarsalami.co.uk
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 2.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Josh_Bright
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+// This is the single file output by sass. It is intended to ONLY @import other files.
+
+
+// 1 - TOOLS
+@import '1-tools/normalize';
+
+
+// 2 - HELPERS
+@import '2-helpers/variables';
+@import '2-helpers/functions';
+@import '2-helpers/mixins';
+
+
+// 3 - BASICS
+@import '3-basics/base';
+@import '3-basics/buttons';
+@import '3-basics/links';
+@import '3-basics/selection-colors';
+@import '3-basics/typography';
+@import '3-basics/forms';
+@import '3-basics/woocommerce';
+
+// 4 - LAYOUT
+@import '4-layout/nav';
+@import '4-layout/container';
+
+// 5 - MODULES
+@import '5-modules/flex-video';
+
+
+// 6 - PAGES
+@import '6-pages/page-home';
+
+// 7 - GLOBAL MODULES
+@import '7-global-modules/gm01-nav';
+@import '7-global-modules/gm02-footer';
+@import '7-global-modules/gm03-mobile-nav';
+
+// 8 - MODULES
+@import '8-modules/m01-home-banner';
+@import '8-modules/m02-latest-releases';
+@import '8-modules/m03-reviews';
+@import '8-modules/m04-text-with-image';
+@import '8-modules/m05-page-header';

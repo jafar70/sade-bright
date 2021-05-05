@@ -1,0 +1,20 @@
+.m05 {
+	text-align: center;
+	padding: 50px 0;
+	&__separator {
+		width: 21px;
+		border-top: 5px solid $black;
+		margin: auto;
+	}
+
+	&__title {
+		letter-spacing: 0.4em;
+		font-weight: 700;
+	}
+
+	+.m04 {
+		@media (max-width: $desk-start) {
+			margin-top: -50px;
+		}
+	}
+}

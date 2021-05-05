@@ -1,0 +1,16 @@
+.woocommerce {
+	ul.order_details{
+		padding: 0;
+	}
+
+	.woocommerce-customer-details,
+	.woocommerce-order-details,
+	.col2-set.addresses {
+		display: block;
+	}
+
+	.related.products {
+		display: block;
+	}
+}
+
