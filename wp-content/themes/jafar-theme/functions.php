@@ -214,3 +214,8 @@ require get_template_directory() . '/inc/acf-blocks.php';
  * Block API Access.
  */
 require get_template_directory() . '/inc/block-api.php';
+
+/**
+ * ACF Options.
+ */
+require get_template_directory() . '/inc/acf-options.php';
