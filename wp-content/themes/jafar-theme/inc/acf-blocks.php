@@ -15,10 +15,10 @@ function block_category( $categories, $post ) {
 	return array_merge(
 		$categories,
 		array(
-			[
-				'slug'  => 'oguk-blocks',
-				'title' => __( 'OGUK Blocks', 'stella' ),
-			],
+			array(
+				'slug'  => 'sade-blocks',
+				'title' => __( 'Sade Blocks', 'stella' ),
+			),
 		)
 	);
 }
@@ -29,25 +29,20 @@ add_filter( 'block_categories', 'block_category', 10, 2 );
  */
 function register_acf_block_types() {
 	acf_register_block_type(
-		[
-			'name'            => 'homepage-hero',
-			'title'           => __( 'Homepage Hero' ),
-			'description'     => __( 'Homepage hero block.' ),
-			'render_template' => 'blocks/m01-homepage-hero.php',
-			'category'        => 'oguk-blocks',
+		array(
+			'name'            => 'hero',
+			'title'           => __( 'Hero' ),
+			'description'     => __( 'Hero block.' ),
+			'render_template' => 'modules/m01-hero.php',
+			'category'        => 'sade-blocks',
 			'icon'            => 'align-center',
-			'keywords'        => [ 'custom', 'block' ],
-			'supports'        => [
+			'keywords'        => array( 'hero' ),
+			'supports'        => array(
 				'mode'     => false,
 				'align'    => false,
 				'multiple' => false,
-			],
-			'enqueue_assets'  => function() {
-				if ( is_admin() ) {
-					wp_enqueue_script( 'block-scripts', get_template_directory_uri() . '/assets/js/vendor.js', [], '1.0.0', true );
-				}
-			},
-		]
+			),
+		)
 	);
 }
 
@@ -60,14 +55,14 @@ if ( function_exists( 'acf_register_block_type' ) ) {
  * Allowed theme block types.
  */
 // function allowed_block_types() {
-// 	return array(
-// 		'core/image',
-// 		'core/group',
-// 		'core/table',
-// 		'core/paragraph',
-// 		'core/quote',
-// 		'core/heading',
-// 		'core/list',
-// 	);
+// return array(
+// 'core/image',
+// 'core/group',
+// 'core/table',
+// 'core/paragraph',
+// 'core/quote',
+// 'core/heading',
+// 'core/list',
+// );
 // }
 // add_filter( 'allowed_block_types', 'allowed_block_types' );

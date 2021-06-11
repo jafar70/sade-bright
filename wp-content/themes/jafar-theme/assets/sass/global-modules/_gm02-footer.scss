@@ -23,7 +23,7 @@
 	}
 
 	&__title {
-		color: $gray;
+		color: $white;
 		letter-spacing: 0.03em;
 		font-weight: 400;
 		font-size: 18px;
@@ -31,19 +31,19 @@
 	}
 
 	p {
-		color: $gray;
+		color: $white;
 		margin: 0;
 		font-size: 14px;
 
 		a{
-			color: $gray;
+			color: $white;
 			font-size: 14px;
 		}
 	}
 
 	
 	&__credits {
-		border-top: 1px solid $gray;
+		border-top: 1px solid $white;
 		margin: 50px 0 0;
 		padding: 30px 0 0;
 		p {
@@ -62,7 +62,7 @@
 			svg {
 				width: 30px;
 				height: 30px;
-				fill: $gray;
+				fill: $white;
 				margin: 0 5px;
 				transition: all ease 0.3s;
 

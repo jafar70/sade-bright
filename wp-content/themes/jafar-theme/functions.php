@@ -147,6 +147,7 @@ function jafar_theme_scripts() {
 	wp_style_add_data( 'jafar-theme-style', 'rtl', 'replace' );
 
 	$script_dependancies = array( 'jquery' );
+	wp_enqueue_script( 'lazyload-js', 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js', array(), _S_VERSION, true );
 
 	if ( $google_maps_key = get_field( 'google_maps_key', 'global_options' ) ) { // phpcs:ignore
 		wp_register_script( 'google-map-api', 'https://maps.googleapis.com/maps/api/js?key=' . $google_maps_key, [ 'jquery' ], true ); // phpcs:ignore

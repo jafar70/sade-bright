@@ -12,3 +12,16 @@
     overflow: hidden;
   }
 }
+
+img.lazy {
+	opacity: 0
+}
+
+img:not(.initial) {
+	-webkit-transition: opacity 1s;
+	transition: opacity 1s
+}
+
+img.loading,img.error,img.initial,img.loaded {
+	opacity: 1
+}

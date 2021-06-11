@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * LazyLoad
  * Animated scroll to a hashed element on the page.
@@ -12,10 +10,9 @@
  * <img class="lazy" data-src="https://via.placeholder.com/150" alt="">
  * <div class="lazy" data-bg="https://via.placeholder.com/150"></div>
  */
-(function () {
-  var lazyLoadInstance = new LazyLoad({// Your custom settings go here
-  });
-})();
-"use strict";
-
-console.log('yoooo');
+ (() => {
+	const lazyLoadInstance = new LazyLoad({
+		// Your custom settings go here
+	});
+ })();
+ 
