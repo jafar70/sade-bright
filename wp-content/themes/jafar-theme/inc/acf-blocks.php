@@ -44,6 +44,23 @@ function register_acf_block_types() {
 			),
 		)
 	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'book-listings',
+			'title'           => __( 'Book Listings' ),
+			'description'     => __( 'Book Listings block.' ),
+			'render_template' => 'modules/m02-book-listings.php',
+			'category'        => 'sade-blocks',
+			'icon'            => 'book',
+			'keywords'        => array( 'book', 'listings' ),
+			'supports'        => array(
+				'mode'     => false,
+				'align'    => false,
+				'multiple' => true,
+			),
+		)
+	);
 }
 
 // Check if function exists and hook into setup.

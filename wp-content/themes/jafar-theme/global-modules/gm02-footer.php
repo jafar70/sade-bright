@@ -20,7 +20,7 @@ $more_title    = get_field( 'more_information_title', 'option' );
 $more_text     = get_field( 'more_information_text', 'option' );
 ?>
 <footer class="gm02">
-	<div class="container">
+	<div class="container container--medium">
 		<div class="gm02__grid">
 			<div class="gm02__grid__item">
 				<h4 class="gm02__title">

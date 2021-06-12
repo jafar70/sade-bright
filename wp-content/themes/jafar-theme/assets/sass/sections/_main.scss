@@ -3,6 +3,7 @@ $bottom_padding: 80px;
 
 .main {
   position: relative;
+	overflow-x: hidden;
 
   &__section {
     position: relative;
