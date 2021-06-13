@@ -22,4 +22,16 @@
 			color: $sade--crail;
 		}
 	}
+
+	&--crail {
+		background-color: $sade--crail;
+		border: 1px solid $sade--crail;
+		color: white;
+
+		&:hover {
+			background-color: $white;
+			color: $sade--crail;
+			border: 1px solid $sade--crail;
+		}
+	}
 }

@@ -1,0 +1,107 @@
+.m03 {
+	position: relative;
+
+	&__media {
+		@include absolute(1);
+		width: 45%;
+		right: 0;
+		left: auto;
+		overflow: hidden;
+
+		@media (max-width: $desk-start) {
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	&__grid {
+		width: 55%;
+		padding: 70px 73px 70px 0;
+
+		@media (max-width: $desk-start) {
+			width: 100%;
+			padding: 3.2em 0em ;
+		}
+
+		@media (max-width: $mobile-start) {
+			padding: 3.7em 0em 2.5em;
+		}
+	}
+
+	&__image {
+		@include absolute(1);
+		object-fit: cover;
+		object-position: top;
+
+		@media (max-width: $desk-start) {
+			position: relative;
+			height: auto;
+		}
+	}
+
+	&__title {
+	
+	}
+
+	&__subtext {
+		margin-bottom: 2em;
+		h1,
+		h2,
+		h3,
+		h4,
+		h5, 
+		h6{
+			font-family: $font;
+		}
+
+		p,
+		li {
+			color: rgba($color: $black, $alpha: .7);
+			font-size: 16px;
+			font-weight: 300;
+			letter-spacing: 0.13px;
+			line-height: 24px;
+		}
+
+		ul,
+		ol {
+			padding-left: 30px;
+		}
+	}
+
+	&__button {
+		font-size: 16px;
+		font-weight: 500;
+		letter-spacing: 1.14px;
+		line-height: 23px;
+		text-align: center;
+		padding: 17px 37px;
+		@media (max-width: $desk-start) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&--align-right {
+  
+		.m03__media {
+			@media (min-width: $desk-start) {
+				right: auto;
+				left: 0;
+			}
+		}
+	
+		.m03__grid {
+			@media (min-width: $desk-start) {
+				margin-left: auto;
+				padding: 176px 0 176px 73px;
+			}
+		}
+	
+	}
+
+	+ .m03 {
+		@media (max-width: $mobile-start) {
+			margin-top: -20px;
+		}
+	}
+}

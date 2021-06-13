@@ -61,6 +61,23 @@ function register_acf_block_types() {
 			),
 		)
 	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'about-me',
+			'title'           => __( 'About me' ),
+			'description'     => __( 'About me block.' ),
+			'render_template' => 'modules/m03-about-me.php',
+			'category'        => 'sade-blocks',
+			'icon'            => 'businesswoman',
+			'keywords'        => array( 'about', 'me' ),
+			'supports'        => array(
+				'mode'     => false,
+				'align'    => false,
+				'multiple' => true,
+			),
+		)
+	);
 }
 
 // Check if function exists and hook into setup.
