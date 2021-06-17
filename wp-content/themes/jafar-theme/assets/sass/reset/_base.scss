@@ -29,6 +29,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+  width: 100%;
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden;
+}
+
 .menu {
   list-style: none;
   padding: 0;

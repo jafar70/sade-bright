@@ -16,12 +16,12 @@ $cta        = get_field( 'm03_link' );
 $text_order = get_field( 'm03_text_position' );
 ?>
 
-<section class="m03 block-element <?php echo esc_html( $text_order ); ?>">
+<section class="m03 break-out <?php echo esc_html( $text_order ); ?>">
 	<div class="container container--medium">
 		<div class="m03__grid">
 			<div class="m03__grid__text">
 				<?php if ( $heading ) : ?>
-					<h2 class="heading--2 m03__title"><?php echo esc_html( $heading ); ?></h2>
+					<h2 class="h2 m03__title"><?php echo esc_html( $heading ); ?></h2>
 				<?php endif; ?>
 				<?php if ( $text ) : ?>
 					<div class="m03__subtext">

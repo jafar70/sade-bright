@@ -10,10 +10,10 @@ $container-width--small:   836px;
   margin-left: auto;
   max-width: $container-width--default;
 
-  .container {
-    width: 100%;
-    max-width: none;
-  }
+  // .container {
+  //   width: 100%;
+  //   max-width: none;
+  // }
 
   &--large {
     max-width: $container-width--large;

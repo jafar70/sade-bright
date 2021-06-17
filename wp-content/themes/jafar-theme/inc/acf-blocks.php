@@ -78,6 +78,23 @@ function register_acf_block_types() {
 			),
 		)
 	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'latest-posts',
+			'title'           => __( 'Latest Posts' ),
+			'description'     => __( 'Latest Posts block.' ),
+			'render_template' => 'modules/m04-latest-posts.php',
+			'category'        => 'sade-blocks',
+			'icon'            => 'admin-post',
+			'keywords'        => array( 'latest', 'posts' ),
+			'supports'        => array(
+				'mode'     => false,
+				'align'    => false,
+				'multiple' => true,
+			),
+		)
+	);
 }
 
 // Check if function exists and hook into setup.
