@@ -45,6 +45,8 @@
 		transition: all ease 0.3s;
 		flex-wrap: wrap;
 		align-content: flex-start;
+		border-radius: 5px;
+    overflow: hidden;
 
 		@media (min-width: $lap-start) {
 			flex-wrap: initial;

@@ -1,6 +1,6 @@
 <?php
 /**
- * Block: GM02 - Footer
+ * Global Modules: GM02 - Footer
  *
  * @used:
  *  - footer.php
@@ -8,62 +8,76 @@
  * @package Jafar_Theme
  */
 
-$instagram_url = get_field( 'instagram_url', 'option' );
-$github_url    = get_field( 'github_url', 'option' );
-$linkedin_url  = get_field( 'linkedin_url', 'option' );
-$twitter_url   = get_field( 'twitter_url', 'option' );
-$facebook_url  = get_field( 'facebook_url', 'option' );
-$contact_title = get_field( 'contact_details_title', 'option' );
-$contact_text  = get_field( 'contact_details_text', 'option', false, false );
-$social_title  = get_field( 'social_media_title', 'option' );
-$more_title    = get_field( 'more_information_title', 'option' );
-$more_text     = get_field( 'more_information_text', 'option' );
+$logo         = get_field( 'gm02_logo', 'option' );
+$twitter_url  = get_field( 'twitter_url', 'option' );
+$facebook_url = get_field( 'facebook_url', 'option' );
+$linkedin_url = get_field( 'linkedin_url', 'option' );
+$email        = get_field( 'email_address', 'option' );
 ?>
+
 <footer class="gm02">
-	<div class="container container--medium">
-		<div class="gm02__grid">
-			<div class="gm02__grid__item">
-				<h4 class="gm02__title">
-					<?php echo wp_kses_post( $contact_title ); ?>
-				</h4>
-				<?php echo wp_kses_post( $contact_text ); ?>
-			</div>
-			<div class="gm02__grid__item">
-				<h4 class="gm02__title">
-					<?php echo wp_kses_post( $social_title ); ?>
-				</h4>
-				<div class="gm02__socials">
-					<?php if ( $instagram_url ) { ?>
-						<a href="<?php echo esc_url( $instagram_url ); ?>" rel="noopener" target="_blank" class='nav-right__link' aria-label="Instagram">
-							<?php get_template_part( 'assets/img/inline', 'instagram.svg' ); ?>
-						</a>
-					<?php } ?>
-					<?php if ( $twitter_url ) { ?>
-						<a href="<?php echo esc_url( $twitter_url ); ?>" rel="noopener" target="_blank" class='nav-right__link' aria-label="Twitter">
-							<?php get_template_part( 'assets/img/inline', 'twitter.svg' ); ?>
-						</a>
-					<?php } ?>
-					<?php if ( $linkedin_url ) { ?>
-						<a href="<?php echo esc_url( $linkedin_url ); ?>" rel="noopener" target="_blank" class='nav-right__link' aria-label="LinkedIn">
-							<?php get_template_part( 'assets/img/inline', 'linkedin.svg' ); ?>
-						</a>
-					<?php } ?>
-					<?php if ( $facebook_url ) { ?>
-						<a href="<?php echo esc_url( $facebook_url ); ?>" rel="noopener" target="_blank" class='nav-right__link' aria-label="LinkedIn">
-							<?php get_template_part( 'assets/img/inline', 'facebook.svg' ); ?>
-						</a>
-					<?php } ?>
-				</div>
-			</div>
-			<div class="gm02__grid__item">
-				<h4 class="gm02__title">
-					<?php echo wp_kses_post( $more_title ); ?>
-				</h4>
-				<?php echo wp_kses_post( $more_text ); ?>
-			</div>
+	<div class="container container--medium gm02__grid">
+		<h2 class="heading--1 gm02__logo"><?php echo esc_html( 'Sade Bright' ); ?></h2>
+		<div class="gm02__menu">
+			<?php
+				wp_nav_menu(
+					array(
+						'menu'      => 'footer-menu',
+						'container' => 'ul',
+					)
+				);
+				?>
 		</div>
-		<div class="gm02__credits">
-			<p><?php echo esc_html( '© ' . gmdate( 'Y' ) . ' Sade Bright' ); ?></p>
+
+		<div class="gm02__social">
+
+			<?php if ( $facebook_url ) : ?>
+				<a href="<?php echo esc_url( $facebook_url ); ?>" target="_blank" class="gm02__social__link gm02__social__link--facebook">
+					<?php get_template_part( 'assets/svg/facebook.svg' ); ?>
+				</a>
+			<?php endif; ?>
+
+			<?php if ( $twitter_url ) : ?>
+				<a href="<?php echo esc_url( $twitter_url ); ?>" target="_blank" class="gm02__social__link gm02__social__link--twitter">
+				<?php get_template_part( 'assets/svg/twitter.svg' ); ?>
+				</a>
+			<?php endif; ?>
+
+			<?php if ( $linkedin_url ) : ?>
+				<a href="<?php echo esc_url( $linkedin_url ); ?>" target="_blank" class="gm02__social__link gm02__social__link--linkedin">
+					<?php get_template_part( 'assets/svg/linkedin.svg' ); ?>				
+				</a>
+			<?php endif; ?>
+
+			<?php if ( $email ) : ?>
+				<a href="<?php echo esc_attr( 'mailto:' . $email ); ?>" class="gm02__social__link gm02__social__link--linkedin">
+					<?php get_template_part( 'assets/svg/email.svg' ); ?>				
+				</a>
+			<?php endif; ?>
+		</div>
+	</div>
+
+	<div class="gm02__bottom">
+		<div class="container container--medium flex flex-wrap justify-content--space-between">
+			<div class="gm02__bottom__info flex flex-wrap">
+				<p><?php echo esc_html( '©' . gmdate( 'Y' ) . ' Sade Bright.' ); ?></p>
+				<?php
+				wp_nav_menu(
+					array(
+						'menu'       => 'bottom-footer',
+						'container'  => 'ul',
+						'menu_class' => 'gm02__bottom__info__links',
+					)
+				);
+				?>
+			</div>
+
+			<div class="gm02__bottom__credits">
+				<p class="gm02__bottom__credits__link">
+					<?php echo esc_html( 'Website by ' ); ?>
+					<a href="<?php echo esc_url( 'https://jafarsalami.co.uk' ); ?>" target="_blank"><?php echo esc_html( 'Jafar Salami' ); ?></a>
+				</p>
+			</div>
 		</div>
 	</div>
 </footer>

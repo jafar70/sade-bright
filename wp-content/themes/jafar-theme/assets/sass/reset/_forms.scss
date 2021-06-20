@@ -60,3 +60,115 @@ textarea {
 select[multiple] {
 	vertical-align: top;
 }
+
+
+#m05__form.m05__grid__form {
+  [id^=gform_fields_] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  input[type='text'],
+  input[type='tel'],
+  input[type='email'],
+  select,
+  textarea {
+    border-radius: 8px;
+    background-color: #F4F5F6;
+    padding: 10px 11px;
+    font-size: 16px;
+    letter-spacing: 0.13px;
+    line-height: 28px;
+    width: 100%;
+  }
+
+  select {
+    background-image: url(images/svg/icon-select.svg);
+    background-repeat: no-repeat;
+    background-position: center right 16px;
+  }
+
+  input[type=checkbox]{
+    -webkit-appearance:checkbox;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #979797;
+  }
+
+  textarea {
+    height: 96px;
+  }
+
+  .gfield_error{
+    .ginput_container {
+      input {
+        box-shadow:inset 0px 0px 0px 2px #f00;
+      }
+    }
+  }
+
+  .gf_consent {
+    .gfield_label {
+      display: none;
+    }
+  }
+
+  label {
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0.12px;
+    line-height: 28px; 
+
+		.gfield_required {
+			color: $sade--crail;
+		}
+  }
+
+  .gfield {
+    width: 100%;
+    padding-bottom: 20px;
+
+    &.gf_consent {
+      padding-bottom: 30px;
+    }
+
+		&.gform_validation_container {
+			display: none;
+		}
+  }
+
+  .gf_left_half {
+    width: 48%;
+    @media (max-width: $mobile-start) {
+      width: 100%;
+    }
+  }
+
+  .gf_right_half {
+    width: 48%;
+    @media (max-width: $mobile-start) {
+      width: 100%;
+    }
+  }
+
+  .ginput_container_consent {
+    span.gfield_required  {
+      display: none;
+    }
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  li input[type=checkbox]+label {
+    background: url(images/svg/rb-e.svg) left top no-repeat;
+    padding-left: 36px;
+  }
+
+  li input[type=checkbox]:checked+label {
+    background: url(images/svg/rb-f.svg) left top no-repeat;
+    padding-left: 36px;
+  }
+}
+}

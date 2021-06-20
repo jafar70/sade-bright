@@ -5,7 +5,24 @@
   text-align: center;
   max-width: 100%;
   transition: all ease 0.3s;
-	padding: 10px 15px;
+	padding: 10px 31px;
+	border-radius: 24px;
+	font-size: 14px;
+	line-height: normal;
+
+	&:focus {
+    outline: none;
+	}
+
+	&::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    left: -6px;
+    top: -5.5px;
+    border-radius: 100px;
+	}
 
   // Hide empty buttons.
   &:not(input[type='submit']):empty {
@@ -17,9 +34,18 @@
 		border: 1px solid $white;
 		color: white;
 
-		&:hover {
+		&:hover,
+		&:focus,
+		&:focus-within {
 			background-color: $white;
 			color: $sade--crail;
+		}
+
+		&:focus,
+		&:focus-within {
+			&::after {
+				border: 2px dashed $white;
+			}
 		}
 	}
 
@@ -28,10 +54,18 @@
 		border: 1px solid $sade--crail;
 		color: white;
 
-		&:hover {
-			background-color: $white;
-			color: $sade--crail;
-			border: 1px solid $sade--crail;
+		&:hover,
+		&:focus,
+		&:focus-within {
+			background-color: darken($color: $sade--crail, $amount: 10);
+			border-color: darken($color: $sade--crail, $amount: 10);
+		}
+
+		&:focus,
+		&:focus-within {
+			&::after {
+				border: 2px dashed $sade--crail;
+			}
 		}
 	}
 }

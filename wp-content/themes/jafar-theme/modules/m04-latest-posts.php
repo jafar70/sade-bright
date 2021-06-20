@@ -26,7 +26,7 @@ $featured_posts = get_field( 'm04_posts' );
 					$heading    = get_the_title( $featured_post->ID );
 					$price      = wc_get_product( $featured_post->ID );
 					$image_id   = get_post_thumbnail_id( $featured_post->ID );
-					$image_url  = get_the_post_thumbnail_url( $featured_post->ID, 'full' );
+					$image_url  = get_the_post_thumbnail_url( $featured_post->ID, 'large' );
 					$alt_text   = get_post_meta( $featured_post->ID, '_wp_attachment_image_alt', true );
 					$image_attr = is_admin() ? 'src=' . $image_url : 'data-src=' . $image_url;
 					$post_date  = get_the_date( 'dS M Y', $featured_post->ID );
@@ -51,7 +51,7 @@ $featured_posts = get_field( 'm04_posts' );
 								?>
 								<?php echo esc_html( $post_date ); ?>
 							</h6>
-							<h5 class="m04__post__text__title"><?php echo esc_html( $heading ); ?></h5>
+							<h6 class="m04__post__text__title"><?php echo esc_html( $heading ); ?></h6>
 						</div>
 					</a>
 				<?php endforeach; ?>
@@ -101,7 +101,7 @@ $featured_posts = get_field( 'm04_posts' );
 									?>
 									<?php echo esc_html( $post_date ); ?>
 								</h6>
-								<h5 class="m04__post__text__title"><?php echo esc_html( $heading ); ?></h5>
+								<h6 class="m04__post__text__title"><?php echo esc_html( $heading ); ?></h6>
 							</div>
 						</a>
 

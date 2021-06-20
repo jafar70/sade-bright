@@ -1,73 +1,189 @@
 .gm02 {
 	background-color: $sade--crail;
-	padding: 60px 0;
 
-	@media (max-width: $mobile-start) {
-		padding: 40px 0;
+	p,
+	li {
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 400;
 	}
 
 	&__grid {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0 -20px;
-		&__item {
-			margin: 0 10px 0;
-			width: calc(33.3% - 20px);
-			text-align: center;
+		padding: 49px 0 48px;
+	}
 
-			@media (max-width: $desk-start) {
-				width: 100%;
-				margin: 0 10px 20px;
+	&__logo {
+		margin: 0 auto 45px;
+		font-family: $logo-font;
+		display: block;
+		font-weight: 400;
+		text-align: center;
+		color: $white;
+	}
+
+	&__menu {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				margin: 0 24px 10px;
+				a {
+					font-size: 14px;
+					line-height: 20px;
+					color: $white;
+				}
 			}
 		}
 	}
 
-	&__title {
-		color: $white;
-		letter-spacing: 0.03em;
-		font-weight: 400;
-		font-size: 18px;
-		margin: 0 0 25px;
-	}
-
-	p {
-		color: $white;
-		margin: 0;
+	&__address {
 		font-size: 14px;
-
-		a{
-			color: $white;
-			font-size: 14px;
-		}
+		line-height: 20px;
+		text-align: center;
+		color: $white;
+		margin: 28px 0 10px;
 	}
 
-	
-	&__credits {
-		border-top: 1px solid $white;
-		margin: 50px 0 0;
-		padding: 30px 0 0;
-		p {
-			font-size: 16px;
-			color: $white;
-			text-align: center;
-		}
-		@media (max-width: $mobile-start) {
-			margin: 30px 0 0;
-			padding: 30px 0 0;
-		}
+	&__tel {
+		margin: 0 12px;
+		color: $white;
 	}
 
-	&__socials {
-		a {
+	&__email {
+		margin: 0 12px;
+		color: $white;
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 31px 0 0;
+
+		&__link {
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			border: 1px solid $white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 8px;
+			transition: all ease 0.3s;
+			position: relative;
+
 			svg {
-				width: 30px;
-				height: 30px;
-				fill: $white;
-				margin: 0 5px;
+				width: 18px;
+				height: 18px;
+				color: $white;
 				transition: all ease 0.3s;
+			}
 
-				&:hover {
-					fill: $white;
+			&::after {
+				content: "";
+				position: absolute;
+				width: calc(100% + 12px);
+				height: calc(100% + 12px);
+				left: -5.5px;
+				top: -5.5px;
+				border-radius: 100px;
+			}
+
+			&:hover,
+			&:focus,
+			&:focus-within {
+				background-color: $white;
+
+				svg {
+					color: $sade--crail;
+				}
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			&:focus,
+			&:focus-within {
+				&::after {
+					border: 2px dashed $white;
+				}
+			}
+		}
+	}
+
+	&__bottom {
+		background-color: $white;
+		padding: 24px 0;
+
+		&__info {
+			@media (max-width: $desk-start) {
+				width: 100%;
+				justify-content: center;
+				margin-bottom: 10px;
+			}
+
+			p {
+				color: $black;
+				margin: 0 16px 0 0;
+
+				@media (max-width: $desk-start) {
+					margin-bottom: 10px;
+				}
+			}
+
+			&__links {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+
+				li {
+					color: #000410;
+					margin: 0 16px 0 0;
+
+					&:last-child {
+						margin: 0;
+					}
+
+					a {
+						transition: all ease 0.3s;
+
+						&:hover {
+							color: $sade--crail;
+							text-shadow: .6px 0 0 currentColor;
+						}
+					}
+				}
+			}
+		}
+
+		&__credits {
+			color: $black;
+
+			@media (max-width: $desk-start) {
+				width: 100%;
+				text-align: center;
+			}
+
+			&__link {
+				color: $black;
+
+				a {
+					color: $sade--crail;
+					transition: all ease 0.3s;
+
+					&:hover {
+						color: $sade--crail;
+						text-shadow: .6px 0 0 currentColor;
+					}
 				}
 			}
 		}

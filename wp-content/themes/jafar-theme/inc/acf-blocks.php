@@ -95,6 +95,40 @@ function register_acf_block_types() {
 			),
 		)
 	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'form',
+			'title'           => __( 'Form' ),
+			'description'     => __( 'Form block.' ),
+			'render_template' => 'modules/m05-form.php',
+			'category'        => 'sade-blocks',
+			'icon'            => 'form',
+			'keywords'        => array( 'form' ),
+			'supports'        => array(
+				'mode'     => false,
+				'align'    => false,
+				'multiple' => true,
+			),
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'page-heading',
+			'title'           => __( 'Page Heading' ),
+			'description'     => __( 'Page heading block.' ),
+			'render_template' => 'modules/m06-page-heading.php',
+			'category'        => 'sade-blocks',
+			'icon'            => 'heading',
+			'keywords'        => array( 'page', 'heading' ),
+			'supports'        => array(
+				'mode'     => false,
+				'align'    => false,
+				'multiple' => true,
+			),
+		)
+	);
 }
 
 // Check if function exists and hook into setup.
@@ -116,4 +150,4 @@ if ( function_exists( 'acf_register_block_type' ) ) {
 // 'core/list',
 // );
 // }
-// add_filter( 'allowed_block_types', 'allowed_block_types' );
+// add_filter( 'allowed_block_types', 'allowed_block_types' );.
