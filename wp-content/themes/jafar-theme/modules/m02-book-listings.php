@@ -13,7 +13,7 @@ $products = get_field( 'm02_products' );
 ?>
 
 <section class="m02 break-out">
-	<div class="container container--medium">
+	<div class="container">
 		<?php if ( $heading ) : ?>
 		<h2 class="m02__title"><?php echo esc_html( $heading ); ?></h2>
 		<?php endif; ?>

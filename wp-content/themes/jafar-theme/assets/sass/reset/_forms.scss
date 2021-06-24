@@ -96,12 +96,13 @@ select[multiple] {
   }
 
   textarea {
-    height: 96px;
+    height: 135px;
   }
 
   .gfield_error{
     .ginput_container {
-      input {
+      input,
+			textarea {
         box-shadow:inset 0px 0px 0px 2px #f00;
       }
     }

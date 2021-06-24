@@ -22,7 +22,7 @@ $signature = get_field( 'm01_signature' );
 ?>
 
 <section class="m01 break-out">
-	<div class="container container--medium">
+	<div class="container">
 		<div class="m01__grid flex flex-wrap justify-content--space-between align-items--center">
 			<?php if ( $image ) : ?>
 				<div class="m01__grid__img">

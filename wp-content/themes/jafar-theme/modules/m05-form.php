@@ -14,7 +14,7 @@ $form_id = get_field( 'm05_form_id' );
 ?>
 
 <section class="m05 break-out">
-	<div class="container container--medium">
+	<div class="container">
 		<div class="m05__grid flex flex-wrap justify-content--space-between">
 			<div class="m05__grid__text">
 				<?php if ( $heading ) : ?>

@@ -12,7 +12,7 @@ $heading = get_field( 'm05_title' );
 ?>
 
 <div class="m05 block-element">
-	<div class="container container--medium">
+	<div class="container">
 		<?php if ( $heading ) : ?>
 			<hr class="m05__separator">
 			<h1 class="m05__title h2"><?php echo esc_html( $heading ); ?></h1>

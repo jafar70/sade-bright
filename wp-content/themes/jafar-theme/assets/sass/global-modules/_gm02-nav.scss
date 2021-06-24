@@ -1,0 +1,41 @@
+.gm02 {
+	box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+	background-color: $white;
+
+	&__grid {
+		padding: 20px 0;
+		&__logo {
+			h2 {
+				font-family: $logo-font;
+				font-weight: 400;
+				margin: 0;
+				color: $sade--crail;
+			}
+		}
+
+		&__menu {
+		}
+	}
+
+	&__menu {
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+    margin: 0;
+
+		li {
+			&:not(:last-child) {
+				margin: 0 39px 0 0;
+			}
+			
+			a {
+				transition: all ease 0.3s;
+
+				&:hover {
+					-webkit-text-stroke: 0.5px $sade--crail;
+					color: $sade--crail;
+				}
+			}
+		}
+	}
+}

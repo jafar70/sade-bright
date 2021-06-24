@@ -13,7 +13,7 @@ $featured_posts = get_field( 'm04_posts' );
 ?>
 
 <section class="m04 break-out">
-	<div class="container container--medium">
+	<div class="container">
 		<?php if ( $heading ) : ?>
 		<h2 class="m04__title"><?php echo esc_html( $heading ); ?></h2>
 		<?php endif; ?>

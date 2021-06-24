@@ -15,7 +15,7 @@ $signature = get_field( 'm04_signature' );
 ?>
 
 <div class="m04 block-element">
-	<div class="container container--medium">
+	<div class="container">
 		<div class="m04__grid">
 			<div class="m04__grid__img">
 			<?php

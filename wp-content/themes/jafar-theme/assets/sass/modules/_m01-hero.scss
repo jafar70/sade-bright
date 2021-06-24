@@ -1,5 +1,11 @@
 .m01 {
 	overflow-x: hidden;
+	padding-top: 60px;
+
+	@media (min-width: $lap-start) {
+		padding-top: 0;
+	}
+
 	&__grid {
 		&__img {
 			display: block;
@@ -49,7 +55,7 @@
 		@media (min-width: $lap-start) {
 			padding: 70px 0px 150px;
 		}
-		
+
 		&:after {
 			content: "";
 			background-color: $sade--crail;
@@ -85,7 +91,7 @@
 
 		h1 {
 			margin-bottom: 0;
-			
+
 			@media (min-width: $lap-start) {
 				margin-bottom: 0;
 				margin-top: 70px;

@@ -11,7 +11,7 @@
 
 ?>
 
-<?php get_template_part( 'global-modules/gm02', 'footer' ); ?>
+<?php get_template_part( 'global-modules/gm03', 'footer' ); ?>
 </div><!-- #page -->
 <?php wp_footer(); ?>
 

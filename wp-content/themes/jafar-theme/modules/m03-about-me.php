@@ -17,7 +17,7 @@ $text_order = get_field( 'm03_text_position' );
 ?>
 
 <section class="m03 break-out <?php echo esc_html( $text_order ); ?>">
-	<div class="container container--medium">
+	<div class="container">
 		<div class="m03__grid">
 			<div class="m03__grid__text">
 				<?php if ( $heading ) : ?>
@@ -43,7 +43,7 @@ $text_order = get_field( 'm03_text_position' );
 	</div>
 	<div class="m03__media">
 		<?php if ( $image ) : ?>
-			<img <?php echo esc_attr( $image_attr ); ?> alt="<?php echo esc_attr( $image['alt'] ); ?>" class='lazy'>
+			<img <?php echo esc_attr( $image_attr ); ?> alt="<?php echo esc_attr( $image['alt'] ); ?>" class='lazy m03__media__image'>
 		<?php endif; ?>
 	</div>
 </section>
