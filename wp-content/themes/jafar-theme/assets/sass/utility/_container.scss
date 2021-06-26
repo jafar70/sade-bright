@@ -9,11 +9,7 @@ $container-width--small:   836px;
   margin-right: auto;
   margin-left: auto;
   max-width: $container-width--default;
-
-  // .container {
-  //   width: 100%;
-  //   max-width: none;
-  // }
+	position: relative;
 
   &--large {
     max-width: $container-width--large;

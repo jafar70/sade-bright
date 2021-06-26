@@ -43,7 +43,7 @@ add_action( 'after_setup_theme', 'jafar_theme_woocommerce_setup' );
  * @return void
  */
 function jafar_theme_woocommerce_scripts() {
-	wp_enqueue_style( 'jafar-theme-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
+//	wp_enqueue_style( 'jafar-theme-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {
@@ -69,7 +69,7 @@ add_action( 'wp_enqueue_scripts', 'jafar_theme_woocommerce_scripts' );
  *
  * @link https://docs.woocommerce.com/document/disable-the-default-stylesheet/
  */
-add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+//add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 /**
  * Add 'woocommerce-active' class to the body tag.

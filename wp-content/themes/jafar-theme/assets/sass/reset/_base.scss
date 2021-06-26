@@ -34,6 +34,12 @@ header {
 	top: 0;
 	width: 100%;
 	z-index: 999;
+
+	&.page-header,
+	&.entry-header {
+		position: relative;
+		z-index: 1;
+	}
 }
 
 html, body {
@@ -64,5 +70,13 @@ html, body {
     display: block;
     background: rgba(0, 0, 0, 0.9);
     position: fixed;
+  }
+
+	&.is-active {
+		display: block;
+    background-color: rgba(0,0,0,.7);
+    z-index: -1;
+    position: fixed;
+    height: 100vh;
   }
 }

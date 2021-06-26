@@ -16,8 +16,12 @@
 
 		&__link {
 			border-left: 1px solid $white;
-			display: inline-block;
+			display: none;
 			padding: 9px 10px;
+
+			@media (min-width: $mobile-start){
+				display: inline-block;
+			}
 			
 			svg {
 				width: 14px;
