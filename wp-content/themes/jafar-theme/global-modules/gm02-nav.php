@@ -18,19 +18,27 @@ $email        = get_field( 'email_address', 'option' );
 	<div class="container">
 		<div class="gm02__grid flex justify-content--space-between align-items--center">
 			<a href="<?php echo esc_url( home_url() ); ?>" class="gm02__grid__logo">
-				<h2>Sade Bright</h2>
+				<h2><?php echo esc_html( 'Sade Bright' ); ?></h2>
 			</a>
 
+			<a class="gm02__grid__closebtn"><?php echo esc_html( '×' ); ?></a>
+
 			<div class="gm02__grid__menu">
-			<?php
-			wp_nav_menu(
-				array(
-					'menu'       => 'menu-1',
-					'container'  => 'ul',
-					'menu_class' => 'gm02__menu',
-				)
-			);
-			?>
+				<?php
+				wp_nav_menu(
+					array(
+						'menu'       => 'menu-1',
+						'container'  => 'ul',
+						'menu_class' => 'gm02__menu',
+					)
+				);
+				?>
+			</div>
+
+			<div class="gm02__grid__hamburger">	
+				<span class='bar1'></span>
+				<span class='bar2'></span>
+				<span class='bar3'></span>
 			</div>
 		</div>
 	</div>

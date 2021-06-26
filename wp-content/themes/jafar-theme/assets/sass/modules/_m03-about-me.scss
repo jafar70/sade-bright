@@ -1,12 +1,17 @@
 .m03 {
 	position: relative;
 
+	.container {
+		position: relative;
+	}
+
 	&__media {
 		@include absolute(1);
 		width: 45%;
 		right: 0;
 		left: auto;
 		overflow: hidden;
+		border-radius: 30px;
 
 		@media (max-width: $desk-start) {
 			position: relative;
@@ -17,7 +22,7 @@
 			@include absolute(1);
 			object-fit: cover;
 			object-position: top;
-	
+
 			@media (max-width: $desk-start) {
 				position: relative;
 				height: auto;
@@ -31,7 +36,7 @@
 
 		@media (max-width: $desk-start) {
 			width: 100%;
-			padding: 3.2em 0em ;
+			padding: 3.2em 0em;
 		}
 
 		@media (max-width: $mobile-start) {
@@ -40,7 +45,6 @@
 	}
 
 	&__title {
-	
 	}
 
 	&__subtext {
@@ -49,8 +53,8 @@
 		h2,
 		h3,
 		h4,
-		h5, 
-		h6{
+		h5,
+		h6 {
 			font-family: $font;
 		}
 
@@ -82,21 +86,26 @@
 	}
 
 	&--align-right {
-  
 		.m03__media {
 			@media (min-width: $desk-start) {
 				right: auto;
 				left: 0;
 			}
 		}
-	
+
 		.m03__grid {
-			@media (min-width: $desk-start) {
-				margin-left: auto;
-				padding: 176px 0 176px 73px;
+			margin-left: auto;
+			padding: 70px 0 70px 73px;
+
+			@media (max-width: $desk-start) {
+				width: 100%;
+				padding: 3.2em 0em;
+			}
+
+			@media (max-width: $mobile-start) {
+				padding: 3.7em 0em 2.5em;
 			}
 		}
-	
 	}
 
 	+ .m03 {
