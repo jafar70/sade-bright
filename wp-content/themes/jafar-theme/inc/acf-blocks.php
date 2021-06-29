@@ -76,6 +76,11 @@ function register_acf_block_types() {
 				'align'    => false,
 				'multiple' => true,
 			),
+			'enqueue_assets'  => function() {
+				wp_enqueue_style( 'plyr-style', 'https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.min.css', array(), '3.6.8' );
+				wp_enqueue_script( 'plyr-js', 'https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.min.js', array( 'jquery' ), '3.6.8', true );
+				wp_enqueue_script( 'jafar-vendor', get_template_directory_uri() . '/assets/js/vendor.js', array( 'jquery' ), '1.0.0', true );
+			},
 		)
 	);
 
@@ -118,7 +123,7 @@ function register_acf_block_types() {
 			'name'            => 'page-heading',
 			'title'           => __( 'Page Heading' ),
 			'description'     => __( 'Page heading block.' ),
-			'render_template' => 'modules/m06-page-heading.php',
+			'render_template' => 'modules/m06-page-header.php',
 			'category'        => 'sade-blocks',
 			'icon'            => 'heading',
 			'keywords'        => array( 'page', 'heading' ),

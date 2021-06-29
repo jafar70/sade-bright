@@ -150,6 +150,8 @@ function jafar_theme_scripts() {
 
 	$script_dependancies = array( 'jquery' );
 	wp_enqueue_script( 'lazyload-js', 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js', array(), _S_VERSION, true );
+	wp_enqueue_style( 'plyr-style', 'https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.min.css', array(), _S_VERSION );
+	wp_enqueue_script( 'plyr-js', 'https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.min.js', array(), _S_VERSION, true );
 
 	if ( $google_maps_key = get_field( 'google_maps_key', 'global_options' ) ) { // phpcs:ignore
 		wp_register_script( 'google-map-api', 'https://maps.googleapis.com/maps/api/js?key=' . $google_maps_key, [ 'jquery' ], true ); // phpcs:ignore
@@ -158,6 +160,7 @@ function jafar_theme_scripts() {
 
 	wp_enqueue_script( 'jafar-script', get_template_directory_uri() . '/assets/js/custom.min.js', array(), _S_VERSION, true );
 
+	wp_enqueue_script( 'jafar-vendor', get_template_directory_uri() . '/assets/js/vendor.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'jafar-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

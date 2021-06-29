@@ -1,0 +1,16 @@
+.m06 {
+	background: $sade--crail;
+	padding: 77px 0 83px;
+
+	&__title {
+		color: $white;
+		margin: 0;
+		text-align: center;
+	}
+
+	+ .m03 {
+		@media (min-width: $desk-start) {
+			padding: 60px 0 0;
+		}
+	}
+}
