@@ -1,7 +1,7 @@
-$container-width--default: 1275px;
+$container-width--default: 1200px;
 $container-width--large:   1268px;
 $container-width--medium:  1052px;
-$container-width--small:   836px;
+$container-width--small:   756px;
 
 .container {
   width: 90%;
@@ -34,6 +34,10 @@ $container-width--small:   836px;
       flex-grow: 1;
     }
   }
+
+	&.entry-content {
+		max-width: $container-width--small;
+	}
 }
 
 .break-out {

@@ -134,6 +134,23 @@ function register_acf_block_types() {
 			),
 		)
 	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'video',
+			'title'           => __( 'Video' ),
+			'description'     => __( 'Video block.' ),
+			'render_template' => 'modules/m07-video.php',
+			'category'        => 'sade-blocks',
+			'icon'            => 'video',
+			'keywords'        => array( 'video' ),
+			'supports'        => array(
+				'mode'     => false,
+				'align'    => false,
+				'multiple' => true,
+			),
+		)
+	);
 }
 
 // Check if function exists and hook into setup.
