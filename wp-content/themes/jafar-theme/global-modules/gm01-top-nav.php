@@ -56,12 +56,7 @@ $email        = get_field( 'email_address', 'option' );
 				</a>
 			</li>
 
-			<li>
-				<a href="<?php echo esc_url( site_url() . '/basket' ); ?>" class="gm01__list__link gm01__list__link--basket">
-					<?php get_template_part( 'assets/svg/cart.svg' ); ?>	
-					<span>2000</span>			
-				</a>
-			</li>
+			<?php echo do_shortcode( '[woo_cart_but]' ); ?>
 
 			</ul>
 	</div>

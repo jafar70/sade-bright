@@ -16,14 +16,50 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<?php
-		while ( have_posts() ) :
-			the_post();
+		<section class="m06 break-out">
+			<div class="container">
+				<h1 class="m06__title">
+					<?php echo esc_html( 'Blog' ); ?>
+				</h1>
+			</div>
+		</section>
 
-			get_template_part( 'template-parts/content', 'page' );
+		<div class="m08">
+			<div class="container">
+				<div class="m08__grid">
+				<?php
+				if ( have_posts() ) :
+					/* Start the Loop */
+					while ( have_posts() ) :
+						the_post();
 
-		endwhile; // End of the loop.
-		?>
+						/*
+						* Include the Post-Type-specific template for the content.
+						* If you want to override this in a child theme, then include a file
+						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+						*/
+						get_template_part( 'template-parts/content', 'post' );
+
+					endwhile;
+
+					the_posts_pagination(
+						array(
+							'mid_size'  => 3,
+							'prev_text' => __( '«' ),
+							'next_text' => __( '»' ),
+						)
+					);
+
+				else :
+
+					get_template_part( 'template-parts/content', 'none' );
+
+				endif;
+				?>
+				</div>
+			</div>
+		</div>
+
 	</main><!-- #main -->
 
 <?php

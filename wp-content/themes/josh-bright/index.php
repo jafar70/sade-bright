@@ -37,11 +37,17 @@ get_header();
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/content', 'post' );
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_pagination(
+				array(
+					'mid_size'  => 3,
+					'prev_text' => __( '«' ),
+					'next_text' => __( '»' ),
+				)
+			);
 
 		else :
 
@@ -53,5 +59,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
