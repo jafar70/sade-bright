@@ -80,3 +80,11 @@ html, body {
     height: 100vh;
   }
 }
+
+#body {
+	&.single-post {
+		.container.container--small {
+			margin-bottom: 80px;
+		}
+	}
+}

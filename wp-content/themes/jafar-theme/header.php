@@ -16,11 +16,13 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&600&700&family=Work+Sans:wght@400&500&600&700&family=Satisfy&display=swap" crossorigin />
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&600&700&family=Work+Sans:wght@400&500&600&700&family=Satisfy&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&600&700&family=Work+Sans:wght@400&500&600&700&family=Satisfy&display=swap" media="print" onload="this.media='all'" />
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body id="body" <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'jafar-theme' ); ?></a>

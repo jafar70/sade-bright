@@ -1,6 +1,71 @@
 .m09 {
-	padding: 60px 0;
+	padding: 80px 0;
+
+	&__meta {
+		text-align: center;
+		font-size: 13px;
+		margin-bottom: 20px;
+	}
+
 	&__title {
 		text-align: center;
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 31px 0 0;
+
+		&__link {
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			border: 1px solid $sade--crail;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 8px;
+			transition: all ease 0.3s;
+			position: relative;
+
+			svg {
+				width: 18px;
+				height: 18px;
+				color: $sade--crail;
+				transition: all ease 0.3s;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: calc(100% + 12px);
+				height: calc(100% + 12px);
+				left: -6px;
+				top: -6px;
+				border-radius: 100px;
+			}
+
+			&:hover,
+			&:focus,
+			&:focus-within {
+				background-color: $sade--crail;
+
+				svg {
+					color: $white;
+				}
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			&:focus,
+			&:focus-within {
+				&::after {
+					border: 2px dashed $sade--crail;
+				}
+			}
+		}
 	}
 }

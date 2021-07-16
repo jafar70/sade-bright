@@ -124,7 +124,8 @@
 				}
 			}
 
-			&.current_page_item {
+			&.current_page_item,
+			&.current_page_parent {
 				a {
 					-webkit-text-stroke: 0.5px $sade--crail;
 					color: $sade--crail;
@@ -139,7 +140,7 @@
 			a {
 				transition: all ease 0.3s;
 				display: block;
-				line-height: 1;
+				line-height: 1.1;
 				padding: 15px 35px;
 
 				@media (min-width: 760px) {

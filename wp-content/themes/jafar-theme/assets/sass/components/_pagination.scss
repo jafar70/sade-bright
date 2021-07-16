@@ -1,15 +1,85 @@
 .pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
   
+	.nav-links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
   .page-numbers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
+    margin: 0 0px 0;
+    width: 40px;
+    height: 40px;
     text-align: center;
-    width: 32px;
-    height: 32px;
+    line-height: 41px;
+    color: $black;
+    border-radius: 50%;
+		transition: all ease 0.3s;
+
+    &.first,
+    &.last {
+      img {
+        display: inline-block;
+      }
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+    &.next,
+    &.prev {
+      font-size: 21px;
+      color: $sade--crail;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background-color: $sade--crail;
+        color: #fff;
+
+        .svg-icon {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+
+    &.prev {
+      svg {
+        transform: scaleX(-1);
+      }
+    }
+
+    &:hover {
+      background-color: $sade--crail;
+      color: #fff;
+    }
+
+    &.current {
+      background-color: $sade--crail;
+      color: #fff;
+    }
+
+    svg {
+      width: 9px;
+      height: 42px;
+
+
+    }
+  }
+
+  .next:hover,
+  .prev:hover {
+    background-color: transparent;
+  }
+
+  .prev {
+    svg {}
   }
 }
