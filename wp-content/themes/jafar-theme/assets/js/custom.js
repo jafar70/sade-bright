@@ -136,4 +136,30 @@ jQuery(document).ready(function ($) {
       clearFieldButton.style.display = 'none';
     }, false);
   }
+  /**
+  * Search results Form
+  * Used in search-form-page.php
+  */
+
+
+  var pageSearchField = document.getElementById("search-page");
+  var pageClearFieldButton = document.querySelector(".search-form__close-page");
+
+  if (pageSearchField) {
+    pageSearchField.addEventListener('keyup', function () {
+      if (pageSearchField.value == '') {
+        pageClearFieldButton.style.display = 'none';
+      } else {
+        pageClearFieldButton.style.display = 'flex';
+      }
+    });
+  }
+
+  if (pageSearchField) {
+    pageClearFieldButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      pageSearchField.value = "";
+      pageClearFieldButton.style.display = 'none';
+    }, false);
+  }
 })();

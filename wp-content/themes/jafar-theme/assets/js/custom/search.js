@@ -23,4 +23,29 @@
 		 clearFieldButton.style.display = 'none';
 	 }, false);
  }
+
+ /**
+ * Search results Form
+ * Used in search-form-page.php
+ */
+	const pageSearchField = document.getElementById("search-page");
+	const pageClearFieldButton = document.querySelector(".search-form__close-page");
+ 
+	if (pageSearchField) {
+		pageSearchField.addEventListener('keyup', () => {
+			if (pageSearchField.value == '') {
+				pageClearFieldButton.style.display = 'none';
+			} else {
+				pageClearFieldButton.style.display = 'flex';
+			}
+		});
+	}
+ 
+	if (pageSearchField) {
+		pageClearFieldButton.addEventListener('click', (e) => {
+			e.preventDefault();
+			pageSearchField.value = "";
+			pageClearFieldButton.style.display = 'none';
+		}, false);
+	}
 })();

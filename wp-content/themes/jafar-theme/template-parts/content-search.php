@@ -7,29 +7,21 @@
  * @package Jafar_Theme
  */
 
+$type_post = get_post_type( get_the_ID() );
+if ( 'product' === $type_post ) {
+	$type_post = 'book';
+} elseif ( 'post' === $type_post ) {
+	$type_post = 'blog';
+}
+
+$excerpt = get_the_excerpt( get_the_ID() );
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			jafar_theme_posted_on();
-			jafar_theme_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php jafar_theme_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php jafar_theme_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+<a class="single-search" href="<?php echo esc_url( get_permalink() ); ?>">
+	<h5 class="single-search__tag"><?php echo esc_html( $type_post ); ?></h5>
+	<h2 class="single-search__title"><?php echo esc_html( get_the_title() ); ?></h2>
+	<h4 class="single-search__link"><?php echo esc_url( get_permalink() ); ?></h4>
+	<?php if ( $excerpt ) : ?>
+		<p class="single-search__excerpt"><?php echo wp_kses_post( wp_trim_words( get_the_content(), 27, '...' ) ); ?></p>
+	<?php endif; ?>
+</a><!-- #post-<?php the_ID(); ?> -->
