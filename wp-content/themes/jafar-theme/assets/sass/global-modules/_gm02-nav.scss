@@ -8,10 +8,11 @@
 
 		&__logo {
 			h2 {
-				font-family: $logo-font;
-				font-weight: 400;
 				margin: 0;
 				color: $sade--crail;
+				font-weight: 700;
+				letter-spacing: -2px;
+				text-transform: uppercase;
 			}
 		}
 

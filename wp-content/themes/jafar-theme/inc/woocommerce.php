@@ -266,22 +266,15 @@ function woo_cart_but() {
 		$cart_count = WC()->cart->cart_contents_count;
 		$cart_url   = wc_get_cart_url();
 	?>
-		<li>
-			<a class="gm01__list__link gm01__list__link--basket" href="<?php echo esc_url( $cart_url ); ?>" title="My Basket">
-				<?php get_template_part( 'assets/svg/cart.svg' ); ?>
-				<?php
-				if ( $cart_count > 0 ) {
-					?>
-					<span class="cart-contents-count"><?php echo esc_html( $cart_count ); ?></span>
-					<?php
-				}
-				?>
-			</a>
-		</li>
-		<?php
+	<li>
+		<a class="gm01__list__link gm01__list__link--basket" href="<?php echo esc_url( $cart_url ); ?>" title="My Basket">
+			<?php get_template_part( 'assets/svg/cart.svg' ); ?>
+			<span class="cart-contents-count"><?php echo esc_html( $cart_count ); ?></span>
+		</a>
+	</li>
 
-		return ob_get_clean();
-
+	<?php
+	return ob_get_clean();
 }
 
 

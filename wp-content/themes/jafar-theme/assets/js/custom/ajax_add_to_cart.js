@@ -2,6 +2,7 @@ jQuery(document).ready(function ($) {
 	$('.single_add_to_cart_button').on('click', function (e) {
 		e.preventDefault();
 		const currentValue = parseInt($('.gm01__list__link--basket > span').text());
+		const currentProductTitle = $('.product_title').text();
 		$thisbutton = $(this),
 			$form = $thisbutton.closest('form.cart'),
 			id = $thisbutton.val(),
@@ -25,8 +26,10 @@ jQuery(document).ready(function ($) {
 			complete: function (response) {
 				$thisbutton.addClass('added').removeClass('loading');
 				const newNumber = currentValue + parseInt(product_qty);
-				console.log(newNumber);
+
 				$('.gm01__list__link--basket > span').text(newNumber);
+				$('.woocommerce-message').css('display', 'block');
+				$('.woocommerce-message__text').text( product_qty + ' x ' + '"' + currentProductTitle + '"' + ' is added to your basket.')
 			},
 			success: function (response) {
 				if (response.error & response.product_url) {

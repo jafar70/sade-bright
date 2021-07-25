@@ -37,6 +37,11 @@ $container-width--small:   756px;
 
 	&.entry-content {
 		max-width: $container-width--small;
+
+		#body.woocommerce-cart &,
+		#body.woocommerce-checkout & {
+			max-width: $container-width--default;
+		}
 	}
 }
 

@@ -7,7 +7,7 @@ textarea,
   cursor: pointer;
 
   &:focus {
-    outline: 1px dashed currentColor;
+    outline: 1px dashed transparent;
     outline-offset: 1px;
 
     @media (pointer: coarse) {

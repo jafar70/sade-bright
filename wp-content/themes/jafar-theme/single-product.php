@@ -22,6 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' ); ?>
 
 <div class="container">
+
+	<div class="woocommerce-message" role="alert">
+		<span class="woocommerce-message__text">2 × “JIA Wristband” are added to your bag.</span> <a href="<?php echo esc_url( site_url() . '/checkout/' ); ?>" class="woocommerce-message-link">Go to checkout</a> | <a href="<?php echo esc_url( site_url() . '/store/' ); ?>" class="woocommerce-message-link">Continue shopping</a>
+	</div>
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.
@@ -54,7 +58,7 @@ get_header( 'shop' ); ?>
 		 *
 		 * @hooked woocommerce_get_sidebar - 10
 		 */
-		//do_action( 'woocommerce_sidebar' );
+		// do_action( 'woocommerce_sidebar' );
 	?>
 </div>
 <?php

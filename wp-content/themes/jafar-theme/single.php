@@ -36,9 +36,7 @@ get_header();
 		<div class="container">
 			<div class="m09">
 				<h6 class="m09__meta">
-					<?php echo esc_html( 'by ' ); ?>
-					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>"><?php echo esc_html( $full_name ); ?></a>
-					<?php echo esc_html( '/ ' . $post_date ); ?>
+					<?php echo esc_html( 'by ' . $full_name . ' / ' . $post_date ); ?>
 				</h6>
 				<?php if ( $heading ) : ?>
 					<h1 class="m09__title h1"><?php echo esc_html( $heading ); ?></h1>
@@ -92,7 +90,10 @@ get_header();
 			);
 			?>
 
-			<?php //get_template_part( 'modules/m08', 'share-article' ); ?>
+			<?php
+			//phpcs:disable
+			// get_template_part( 'modules/m08', 'share-article' );. 
+			?>
 		</div>
 
 	</main><!-- #main -->

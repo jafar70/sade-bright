@@ -69,3 +69,105 @@
 		}
 	}
 }
+
+.single_add_to_cart_button {
+	position: relative !important;
+  text-align: center !important;
+  max-width: 100% !important;
+  transition: all ease 0.3s !important;
+	padding: 10px 31px !important;
+	border-radius: 24px !important;
+	font-size: 14px !important;
+	line-height: normal !important;
+	background-color: $sade--crail !important;
+	border: 1px solid $sade--crail !important;
+	color: white;
+	display: block !important;
+	margin: 23px 0 0 !important;
+
+	&:hover,
+	&:focus,
+	&:focus-within {
+		background-color: darken($color: $sade--crail, $amount: 10) !important;
+		border-color: darken($color: $sade--crail, $amount: 10) !important;
+	}
+
+	&.button::after {
+    content: "";
+    position: static;
+    width: auto;
+    height: auto;
+    left: initial;
+    top: initial;
+    border-radius: 0;
+	}
+
+	&.loading {
+		padding: 10px 41px 10px 31px !important;
+		&:after {
+			position: absolute;
+			top: 0.69rem !important;
+			right: 0.5rem !important;
+
+		}
+	}
+}
+
+.checkout-button {
+	position: relative !important;
+  text-align: center !important;
+  max-width: 100% !important;
+  transition: all ease 0.3s !important;
+	padding: 10px 31px !important;
+	border-radius: 24px !important;
+	font-size: 14px !important;
+	line-height: normal !important;
+	background-color: $sade--crail !important;
+	border: 1px solid $sade--crail !important;
+	color: white;
+
+	&:hover,
+	&:focus,
+	&:focus-within {
+		background-color: darken($color: $sade--crail, $amount: 10) !important;
+		border-color: darken($color: $sade--crail, $amount: 10) !important;
+	}
+
+	&:focus,
+	&:focus-within {
+		&::after {
+			border: 2px dashed $sade--crail;
+		}
+	}
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+  transition: all ease 0.3s !important;
+	padding: 10px 31px !important;
+	border-radius: 24px !important;
+	font-size: 14px !important;
+	line-height: normal !important;
+	background-color: $sade--crail !important;
+	border: 1px solid $sade--crail !important;
+	color: white !important;
+
+	&:hover,
+	&:focus,
+	&:focus-within {
+		background-color: darken($color: $sade--crail, $amount: 10) !important;
+		border-color: darken($color: $sade--crail, $amount: 10) !important;
+		color: white !important;
+		outline-offset: 0 !important;
+	}
+
+	&:focus,
+	&:focus-within {
+		&::after {
+			border: none;
+		}
+	}
+}
+
+.woocommerce-page table.cart td.actions .coupon{
+	display: none;
+}
