@@ -16,7 +16,7 @@
 		<?php
 			wp_nav_menu(
 				array(
-					'menu'       => 'primary',
+					'menu'       => 'menu-1',
 					'container'  => 'ul',
 					'menu_class' => 'gm01__menu',
 				)

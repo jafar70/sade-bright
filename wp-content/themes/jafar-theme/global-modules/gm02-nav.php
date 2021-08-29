@@ -27,7 +27,7 @@ $email        = get_field( 'email_address', 'option' );
 				<?php
 				wp_nav_menu(
 					array(
-						'menu'       => 'menu-1',
+						'menu'       => 'main-menu',
 						'container'  => 'ul',
 						'menu_class' => 'gm02__menu',
 					)
