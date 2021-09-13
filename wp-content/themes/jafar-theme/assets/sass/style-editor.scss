@@ -22,6 +22,7 @@
 @import 'reset/links';
 @import 'reset/tables';
 @import 'reset/text'; 
+@import 'reset/forms';
 
 
 /*--------------------------------------------------------------
@@ -78,10 +79,6 @@ body {
   pointer-events: none;
 }
 
-.gform_wrapper ul.gform_fields {
-  display: block;
-  margin: 0;
-}
 
 .break-out {
   left: auto !important;
